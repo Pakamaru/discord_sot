@@ -1,0 +1,17 @@
+{
+  "prefix": ";",
+  "token": "ODM5NDQwNzg2NDA3NTU1MDg1.YJJsJw.Wi_kdP9ym1BPd5pVg346jHhxPcU",
+  "guildSettings": {
+    "roles": {
+      "mod": "mod",
+      "admin": "admin",
+      "owner": "owner"
+    },
+    "channels": {
+      "logs": "logs",
+      "mod": "mod",
+      "admin": "admin",
+      "owner": "owner"
+    }
+  }
+}
