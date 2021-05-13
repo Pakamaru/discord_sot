@@ -1,3 +1,7 @@
 config.json
 .idea/*
+<<<<<<< HEAD
 node_modules/*
+=======
+node_modules/*
+>>>>>>> be93bb4ae21cb7277e8578fd0e31775628635140
