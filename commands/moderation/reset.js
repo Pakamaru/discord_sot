@@ -4,9 +4,10 @@ module.exports = {
     name: 'reset',
     description: 'Resets the bot',
     role: 'admin',
-    execute(message, args) {
-        message.channel.send('Resetting...')
-            .then(msg => client.destroy())
-            .then(() => client.login(token));
+    active: false,
+    execute(msg, args) {
+        msg.channel.send('Resetting...');
+        msg.client.destroy();
+        msg.client.login(token);
     },
 };

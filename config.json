@@ -1,17 +1,18 @@
 {
   "prefix": ";",
-  "token": "ODM5NDQwNzg2NDA3NTU1MDg1.YJJsJw.Wi_kdP9ym1BPd5pVg346jHhxPcU",
+  "token": "ODM5NDQwNzg2NDA3NTU1MDg1.YJJsJw.J5B5P_lpDCtJarCAvZvxpFj-Wkk",
   "guildSettings": {
     "roles": {
+      "member": "840161145122062366",
       "mod": "mod",
       "admin": "admin",
       "owner": "owner"
     },
     "channels": {
-      "logs": "logs",
-      "mod": "mod",
-      "admin": "admin",
-      "owner": "owner"
+      "logs": "842115172540612638",
+      "queue": "840163305594552340",
+      "waiting_chat": "839613798155026472",
+      "waiting_voice": "839444799027544068"
     }
   }
 }
