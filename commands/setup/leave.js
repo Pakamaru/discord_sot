@@ -21,7 +21,7 @@ module.exports = {
 function updateQueue(msg){
     let players = '';
     let counter = 0;
-    let queueChannel = msg.guild.channels.cache.get(guildSettings.channels.queue)
+    let queueChannel = msg.guild.channels.cache.get(guildSettings.dev.channels.queue)
     let messageId = queueChannel.lastMessageID;
     msg.client.session.queue.forEach(userId => {
         counter++;
