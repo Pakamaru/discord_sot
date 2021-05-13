@@ -76,18 +76,18 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
     try {
         if(oldUserChannel === null && newUserChannel !== null) {
             // User Joins a voice channel
-            if (newUserChannel.id === guildSettings.channels.waiting_voice){
+            if (newUserChannel.id === guildsettings.main.channels.waiting_voice){
                 if(client.session.queue.includes(newMember.member.id)) return;
                 client.session.queue.push(newMember.member.id);
                 updateQueue(newMember.guild);
-                newMember.guild.channels.cache.get(guildSettings.channels.waiting_chat).send(`<@${newMember.member.id}> you successfully joined the queue`);
+                newMember.guild.channels.cache.get(guildsettings.main.channels.waiting_chat).send(`<@${newMember.member.id}> you successfully joined the queue`);
             }
 
 
         } else if(newUserChannel === null){
             // User leaves a voice channel
-            if(oldUserChannel.id === guildSettings.channels.waiting_voice)
-                newMember.guild.channels.cache.get(guildSettings.channels.logs).send(`<@${newMember.member.id}> left the waiting room channel`);
+            if(oldUserChannel.id === guildsettings.main.channels.waiting_voice)
+                newMember.guild.channels.cache.get(guildsettings.main.channels.logs).send(`<@${newMember.member.id}> left the waiting room channel`);
         }
 
     } catch (e){
@@ -98,7 +98,7 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 function updateQueue(guild){
     let players = '';
     let counter = 0;
-    let queueChannel = guild.channels.cache.get(guildSettings.channels.queue)
+    let queueChannel = guild.channels.cache.get(guildsettings.main.channels.queue)
     let messageId = queueChannel.lastMessageID;
     guild.client.session.queue.forEach(userId => {
         counter++;

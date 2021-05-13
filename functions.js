@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 export function updateQueue(msg){
     let players = '';
     let counter = 0;
-    let queueChannel = msg.guild.channels.cache.get(guildSettings.channels.queue)
+    let queueChannel = msg.guild.channels.cache.get(guildsettings.main.channels.queue)
     let messageId = queueChannel.lastMessageID;
     msg.client.session.queue.forEach(userId => {
         counter++;
